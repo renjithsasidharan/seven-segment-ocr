@@ -4,4 +4,5 @@ Here are some results of ocr extraction:
 ![](results/4.jpg) ![](results/5.jpg) ![](results/6.jpg)
 
 Confusion matrix
+
 ![](results/cm.jpg)

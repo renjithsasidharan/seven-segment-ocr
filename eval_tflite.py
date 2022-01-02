@@ -25,13 +25,8 @@ def run_tflite_model(image_path, interpreter):
     input_details = interpreter.get_input_details()
     output_details = interpreter.get_output_details()
 
-    input_shape = input_details[0]['shape']
     interpreter.set_tensor(input_details[0]['index'], input_data)
-
-    #t0 = time.time()
     interpreter.invoke()
-    #t1 = time.time()
-    #print(t1-t0)
 
     output = interpreter.get_tensor(output_details[0]['index'])
     return output
@@ -80,10 +75,6 @@ def main():
       print(f'{k}')
       print(f'    Accuracy: {v["accuracy"]}')
       print(f'    Average inference time: {v["avg_inference_time"]} sec')
-
-
-
-  
 
 if __name__=="__main__":
     main()

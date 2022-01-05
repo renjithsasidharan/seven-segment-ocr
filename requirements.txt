@@ -1,0 +1,3 @@
+pandas
+Pillow
+tensorflow==2.7.0

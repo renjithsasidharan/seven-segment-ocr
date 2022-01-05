@@ -19,7 +19,7 @@ data/ocr_training_data
 ├── 04976571-ac6b-425f-9474-3b95a4fb9613.png
 ├── 068e4ff1-acf0-43e7-b052-7a59a9c3f87b.png
 ```
-Ground truth file is `data/ocr_training_data\gt.txt`
+Ground truth file is `data/ocr_training_data/gt.txt`
 
 Train the model using jupyter notebook `keras_ocr_7_seg.ipynb`
 

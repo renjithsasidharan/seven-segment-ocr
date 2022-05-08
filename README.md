@@ -51,7 +51,7 @@ Train the model using jupyter notebook `keras_ocr_7_seg.ipynb`
 #### Evaluation
 To run prediction on an image using tensorflow lite
 ```console
-python predict.py --image test/1.png --model meeter_rec_float16.tflite
+python predict.py --image test/1.png --model model_float16.tflite
 ```
 
 To run predictions on all images in directory

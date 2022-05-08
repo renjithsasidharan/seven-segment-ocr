@@ -1,0 +1,2 @@
+/Users/rsasidharan/workspace/seven-segment-ocr/data/annotations/23122019DAE01QMR100012657.jpeg	1
+/Users/rsasidharan/workspace/seven-segment-ocr/data/annotations/23122019DAE01QMR100016077.jpeg	1

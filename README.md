@@ -3,17 +3,17 @@
 OCR for seven segment display using tensorflow lite. 
 The trained keras model is converted to tensorflow lite model `model_float16.tflite`
 
-#### Requirements
-```
-tensorflow==2.7.0
-imgaug
-tqdm
-opencv-python
-matplotlib
-sklearn
-```
+#### Setup
+  1. Clone the repo locally  
+      ```
+      git clone https://github.com/renjithsasidharan/seven-segment-ocr
+      ```
+  2. Install dependencies
+     ```
+     pip install requirements.txt
+     ```
 
-#### Training
+#### Training Data
 Training data is present in `data/ocr_training_data`
 ```console
 data/ocr_training_data
@@ -24,8 +24,30 @@ data/ocr_training_data
 ```
 Ground truth file is `data/ocr_training_data/gt.txt`
 
-Train the model using jupyter notebook `keras_ocr_7_seg.ipynb`
+#### Create more training data
+You can create more training data by first creating annotations and then creating training data from annotations
+##### Create annotations
+  1. Add images to `data/annotations` folder.
+  2. Install annotation tool `PPOCRLabel` from https://github.com/PaddlePaddle/PaddleOCR/tree/release/2.4/PPOCRLabel
+  3. Open `PPOCRLabel` and start annotating new images.
+     1. Create `RectBox` around the reading
+     2. Add the reading in `Recognition Result`
+     3. Save annotations
+   ![](results/annotations.jpg)
+##### Create Training data from annotations
+From `seven-segment-ocr` directory run the command
+```
+python create_ocr_training_data_from_annotations.py
+```
+This will **append** the training data to `data/ocr_training_data`
 
+#### How to train the model using google Colab
+Train the model using jupyter notebook `keras_ocr_7_seg.ipynb`
+  1. Upload the notebook `keras_ocr_7_seg.ipynb` to google Colab
+  2. Create archive of folder `data/ocr_training_data`.
+  3. Upload `ocr_training_data.zip` to google Colab
+  4. Run the training
+  5. Once the training is over, your trained model `meeter_rec_float16.tflite` will be automatically downloaded to your machine from Colab
 #### Evaluation
 To run prediction on an image using tensorflow lite
 ```console

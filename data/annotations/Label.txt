@@ -1,0 +1,2 @@
+annotations/23122019DAE01QMR100012657.jpeg	[{"transcription": "003257", "points": [[81, 25], [211, 25], [211, 67], [81, 67]], "difficult": false}]
+annotations/23122019DAE01QMR100016077.jpeg	[{"transcription": "004344.9", "points": [[110, 35], [241, 35], [241, 77], [110, 77]], "difficult": false}]
